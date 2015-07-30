@@ -14,18 +14,18 @@
 	<!-- 扫描controller（controller层注入） -->
 	<context:component-scan base-package="com.test.ssm.controller" />
 	<mvc:annotation-driven />
-	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-		<property name="messageConverters">
-			<list>
-				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
-					<property name="supportedMediaTypes">
-						<list>
-							<value>text/plain;charset=UTF-8</value>
-						</list>
-					</property>
-				</bean>
-				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
-			</list>
-		</property>
-	</bean>
+<!-- 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> -->
+<!-- 		<property name="messageConverters"> -->
+<!-- 			<list> -->
+<!-- 				<bean class="org.springframework.http.converter.StringHttpMessageConverter"> -->
+<!-- 					<property name="supportedMediaTypes"> -->
+<!-- 						<list> -->
+<!-- 							<value>text/plain;charset=UTF-8</value> -->
+<!-- 						</list> -->
+<!-- 					</property> -->
+<!-- 				</bean> -->
+<!-- 				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" /> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
 </beans>
