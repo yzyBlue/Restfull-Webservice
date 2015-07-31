@@ -27,7 +27,10 @@
 	<select id="getUserByName" resultMap="UserMap">
 		select USERID,USERNAME,PASSWORD from USERTABLE where USERNAME = #{username};
 	</select>
+<<<<<<< HEAD
 	<update id="updateUser" parameterType="com.test.ssm.model.User">
 		update USERTABLE set USERNAME = #{username} , PASSWORD = #{password} where  USERID = #{id} ;
 	</update>
+=======
+>>>>>>> origin/master
 </mapper>
