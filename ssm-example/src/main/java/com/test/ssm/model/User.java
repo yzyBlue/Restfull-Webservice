@@ -1,8 +1,7 @@
 package com.test.ssm.model;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import java.io.Serializable;
-@XmlRootElement(name = "user")
+@XmlRootElement(name = "User")
 public class User implements Serializable{
 	private static final long serialVersionUID = 1796496116086433538L;
 	private int id;

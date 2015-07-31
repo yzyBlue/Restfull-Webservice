@@ -7,33 +7,27 @@
 		<result column="PASSWORD" property="password" jdbcType="VARCHAR" />
 	</resultMap>
 	<select id="getUser" parameterType="int" resultMap="UserMap">
-		select * from
-		USERTABLE where USERID = #{id};
+		select * from USERTABLE where USERID = #{id};
 	</select>
 	<insert id="saveUser" parameterType="com.test.ssm.model.User">
-		<selectKey resultType="int" keyProperty="id" order="AFTER">
-			SELECT
-			ident_current('USERTABLE') as id
+	<selectKey resultType="int" keyProperty="id" order="AFTER">
+			  SELECT ident_current('USERTABLE') as id
 		</selectKey>
 		insert into USERTABLE(USERNAME,PASSWORD)
 		values(#{username},#{password});
-
+		
 	</insert>
 	<delete id="deleteUser" parameterType="int">
 		delete from USERTABLE
 		where USERID = #{id};
 	</delete>
 	<select id="getAllUser" resultMap="UserMap">
-		select
-		USERID,USERNAME,PASSWORD from USERTABLE;
+		select USERID,USERNAME,PASSWORD from USERTABLE;
 	</select>
-	<select id="getUserByName" parameterType="String" resultMap="UserMap">
-		select USERID,USERNAME,PASSWORD from USERTABLE where USERNAME =
-		#{username};
+	<select id="getUserByName" resultMap="UserMap">
+		select USERID,USERNAME,PASSWORD from USERTABLE where USERNAME = #{username};
 	</select>
 	<update id="updateUser" parameterType="com.test.ssm.model.User">
-		update USERTABLE set
-		USERNAME = #{username,jdbcType=VARCHAR},PASSWORD = #{password,jdbcType=VARCHAR} where
-		USERID = #{id,jdbcType=INTEGER};
+		update USERTABLE set USERNAME = #{username} , PASSWORD = #{password} where  USERID = #{id} ;
 	</update>
 </mapper>

@@ -37,17 +37,18 @@ public class UserController {
 		return users;
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT,value="/{id}",produces = "application/xml;charset=UTF-8")
-	public @ResponseBody User updateUserInfo(@PathVariable String id, @RequestBody User user){
-		logger.info(" update User 信息  : "+user.toString());
+	@RequestMapping(value = "/{id}",method = RequestMethod.PUT,produces = "application/xml;charset=UTF-8")
+	public @ResponseBody User updateUserData(@PathVariable("id") String id , @RequestBody User user){
+		logger.info(" Update  User 信息");
 		int i=userDao.updateUser(user);
-		logger.info("查询   User 信息");
+		logger.info(" Get New User 信息");
 		User usernew=userDao.getUser(user.getId());
 		return usernew;
 	}
-	@RequestMapping(method=RequestMethod.DELETE,value="/{id}",produces = "application/xml;charset=UTF-8")
-	public @ResponseBody String deleteUserInfo(@PathVariable String id){
-		logger.info(" delete User 信息   ");
+	
+	@RequestMapping(value = "/{id}",method = RequestMethod.DELETE,produces = "application/xml;charset=UTF-8")
+	public @ResponseBody String deleteUserData(@PathVariable("id") String id){
+		logger.info(" Dlete  User 信息");
 		int i=userDao.deleteUser(Integer.parseInt(id));
 		String response="";
 		if(i>0){
