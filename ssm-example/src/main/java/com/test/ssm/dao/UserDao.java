@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.test.ssm.model.Book;
 import com.test.ssm.model.User;
 @Repository("userDao")
 public interface UserDao {
@@ -13,4 +14,6 @@ public interface UserDao {
 	public List<User> getAllUser();
 	public User getUserByName(String username);
 	public int updateUser(User user);
+	public int saveBook(Book book);
+	public Book getBook(int bookid);
 }

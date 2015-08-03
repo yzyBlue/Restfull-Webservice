@@ -26,6 +26,9 @@ public class Book implements Serializable {
 	private String bookCode;
 	@Column(name="BOOKNAME")
 	private String bookName;
+	public Book() {
+		super();
+	}
 	public Book(int bookId, String bookCode, String bookName) {
 		super();
 		this.bookId = bookId;
@@ -83,5 +86,10 @@ public class Book implements Serializable {
 		} else if (!bookName.equals(other.bookName))
 			return false;
 		return true;
+	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookCode=" + bookCode
+				+ ", bookName=" + bookName + "]";
 	}
 }

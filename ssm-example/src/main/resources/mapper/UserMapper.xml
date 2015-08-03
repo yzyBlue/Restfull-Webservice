@@ -6,6 +6,11 @@
 		<result column="USERNAME" property="username" jdbcType="VARCHAR" />
 		<result column="PASSWORD" property="password" jdbcType="VARCHAR" />
 	</resultMap>
+	<resultMap id="BookMap" type="com.test.ssm.model.Book">
+		<id column="BOOKID" property="bookId" jdbcType="INTEGER" />
+		<result column="BOOKCODE" property="bookCode" jdbcType="VARCHAR" />
+		<result column="BOOKNAME" property="bookName" jdbcType="VARCHAR" />
+	</resultMap>
 	<select id="getUser" parameterType="int" resultMap="UserMap">
 		select * from
 		USERTABLE where USERID = #{id};
@@ -18,6 +23,18 @@
 		insert into USERTABLE(USERNAME,PASSWORD)
 		values(#{username},#{password});
 	</insert>
+		<insert id="saveBook" parameterType="com.test.ssm.model.Book">
+		<selectKey resultType="int" keyProperty="bookId" order="AFTER">
+			SELECT
+			ident_current('BOOKTABLE') as bookId
+		</selectKey>
+		insert into BOOKTABLE(BOOKCODE,BOOKNAME)
+		values(#{bookCode},#{bookName});
+	</insert>
+	<select id="getBook" parameterType="int" resultMap="BookMap">
+		select * from
+		BOOKTABLE where BOOKID = #{bookId};
+	</select>
 	<delete id="deleteUser" parameterType="int">
 		delete from USERTABLE
 		where USERID = #{id};
