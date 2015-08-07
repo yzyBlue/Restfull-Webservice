@@ -51,4 +51,7 @@
 		update USERTABLE set
 		USERNAME = #{username} , PASSWORD = #{password} where USERID = #{id} ;
 	</update>
+	<select id="selectUserByNameAndId" parameterType="String" resultMap="UserMap" >
+		select * from USERTABLE where USERID=#{id} and USERNAME = #{username}
+	</select>
 </mapper>

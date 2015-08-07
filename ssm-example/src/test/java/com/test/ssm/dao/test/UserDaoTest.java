@@ -23,14 +23,14 @@ public class UserDaoTest {
 	@Test
 	public void testUserDao(){
 		
-		logger.debug("*********  getAllUsers  ***********");
-		List<User> userlist=userDao.getAllUser();
-		logger.debug(userlist.size());
-		for (User user:userlist){
-			logger.debug("--------------------------------");
-			logger.debug(user.toString());
-		}
-		logger.debug("*********  getAllUsers  ***********");
+//		logger.debug("*********  getAllUsers  ***********");
+//		List<User> userlist=userDao.getAllUser();
+//		logger.debug(userlist.size());
+//		for (User user:userlist){
+//			logger.debug("--------------------------------");
+//			logger.debug(user.toString());
+//		}
+//		logger.debug("*********  getAllUsers  ***********");
 		
 		
 //		logger.debug("*********  getUser  ***********");
@@ -57,6 +57,10 @@ public class UserDaoTest {
 //		logger.debug(user.getId());
 //		logger.debug("*********  getIdByUserName  ***********");
 		
-		
+		logger.debug("*********  selectUserByNameAndId  ***********");
+		String id="6";
+		String username="Ô¬×ÓÑó";
+		User user=userDao.selectUserByNameAndId(id, username);
+		logger.debug(user.toString());
 	}
 }

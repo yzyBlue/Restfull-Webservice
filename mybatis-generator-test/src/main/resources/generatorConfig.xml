@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_4.0\chs\sqljdbc4.jar" />
+	<context id="context1">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+			connectionURL="jdbc:sqlserver://172.16.100.33;instanceName=CDR;databaseName=clever-cdr-develop"
+			userId="shine_user" password="@shineuser##123" />
+		<javaTypeResolver>  
+            <property name="forceBigDecimals" value="false" />  
+        </javaTypeResolver>  
+		<javaModelGenerator targetPackage="com.test.mybatis.model"
+			targetProject="mybatis-generator-test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="config" targetProject="mybatis-generator-test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="com.test.mybatis.dao"
+			targetProject="mybatis-generator-test" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table schema="" tableName="Person_Patient" domainObjectName="PatientInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Admin_PatientAdmission" domainObjectName="PatientVisitInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Admin_Transaction" domainObjectName="PatientADTInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Admin_DischargeAdministrativeInformation" domainObjectName="PatientDischargeInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+	</context>
+</generatorConfiguration>

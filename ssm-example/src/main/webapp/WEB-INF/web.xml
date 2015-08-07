@@ -9,7 +9,7 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:config/spring.xml;classpath:config/spring-mybatis.xml
+		<param-value>classpath:config/spring-mybatis.xml
 		<!-- classpath:config/spring.xml; -->
 		</param-value>
 	</context-param>
