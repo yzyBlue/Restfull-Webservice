@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
+
+	<!-- 引入配置文件 -->
+	<properties resource="generator.properties"/>
+	
+	<!-- 指定数据连接驱动jar地址 -->
 	<classPathEntry
-		location="C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_4.0\chs\sqljdbc4.jar" />
+		location="${classPath}" />
 	<context id="context1">
+		<!-- 注释 -->
 		<commentGenerator>
-			<property name="suppressDate" value="true" />
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="false"/>
+			<!-- 是否生成注释代时间戳-->
+			<property name="suppressDate" value="true" /> 
 		</commentGenerator>
-		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-			connectionURL="jdbc:sqlserver://172.16.100.33;instanceName=CDR;databaseName=clever-cdr-develop"
-			userId="shine_user" password="@shineuser##123" />
+		
+		<!-- jdbc连接 -->
+		<jdbcConnection driverClass="${jdbc_driver}"
+			connectionURL="${jdbc_url}"
+			userId="${jdbc_user}" password="${jdbc_password}" />
+			
+		<!-- 类型转换 -->  
 		<javaTypeResolver>  
+			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->  
             <property name="forceBigDecimals" value="false" />  
         </javaTypeResolver>  
+        
+        <!-- 生成实体类地址 --> 
 		<javaModelGenerator targetPackage="com.test.mybatis.model"
 			targetProject="mybatis-generator-test">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
 			<property name="enableSubPackages" value="true" />
+			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
+		
+		<!-- 生成mapxml文件 -->
 		<sqlMapGenerator targetPackage="config" targetProject="mybatis-generator-test">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
+		
+		<!-- 生成mapxml对应client，也就是接口dao -->
 		<javaClientGenerator targetPackage="com.test.mybatis.dao"
 			targetProject="mybatis-generator-test" type="XMLMAPPER">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
+		
+		<!-- 配置表信息 -->
 		<table schema="" tableName="Person_Patient" domainObjectName="PatientInfo"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
@@ -44,6 +69,60 @@
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Eval_ProblemDiagnosis" domainObjectName="ProblemDiagnosis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_Order" domainObjectName="OrderInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Action_Order" domainObjectName="OrderStatusInfo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_OrderExcute" domainObjectName="OrderExecutePaper"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Action_OrderExcute" domainObjectName="OrderExecutePaperStatus"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_MedicationOrder" domainObjectName="MedcationOrder"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Action_Medication" domainObjectName="MedcationOrderStatus"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_DrugsDispensing" domainObjectName="DispensingDrugsReq"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Action_DispensingDrugs" domainObjectName="DrugDispenseReqStatus"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_Prescription" domainObjectName="PrescriptionInfo" 
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!-- 忽略列，不生成bean 字段 -->
+			<ignoreColumn column="Guid"/>
+			<!-- 指定列的java数据类型 -->  
+<!-- 			<columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />   -->
 		</table>
 	</context>
 </generatorConfiguration>
