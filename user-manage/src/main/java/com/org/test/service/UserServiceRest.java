@@ -36,6 +36,16 @@ public class UserServiceRest {
     @Context
     private UriInfo uriInfo;
     
+    @GET
+    @Path("/getUserJson")
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getUserJson(){
+		User user=new User(1,"blue","admin");
+		logger.debug(user.toString());
+		return user;
+	}
+    
+    
 	@GET
     @Path("/getAllUserData")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -46,7 +56,7 @@ public class UserServiceRest {
 	
 	@GET
     @Path("/getUserData")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces("application/json")
 	public User getUserData(@QueryParam("id") int id) {
 		User user=userDao.findById(id);
 		logger.info("****************************");
@@ -60,9 +70,9 @@ public class UserServiceRest {
 		}
 	}
     @PUT
-    @Path("/putData")
+    @Path("/putUserData")
     @Produces({ MediaType.APPLICATION_XML })
-    @Consumes("application/xml")
+    @Consumes(MediaType.APPLICATION_JSON)
 	public User putUserData(User user){
     	logger.info("****************************");
 		logger.info(user.toString());
@@ -131,7 +141,7 @@ public class UserServiceRest {
 	}
     @GET
     @Path("/getBookData/{bookid}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces(MediaType.APPLICATION_JSON)
 	public Book getBookData(@PathParam("bookid") int bookid) {
     	Book book=bookDao.findById(bookid);
 		logger.info("****************************");

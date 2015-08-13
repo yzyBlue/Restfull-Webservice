@@ -54,4 +54,11 @@
 	<select id="selectUserByNameAndId" parameterType="String" resultMap="UserMap" >
 		select * from USERTABLE where USERID=#{id} and USERNAME = #{username}
 	</select>
+	<insert id ="insertUserList" parameterType="java.util.List">
+		insert into USERTABLE(USERNAME,PASSWORD)
+		values
+		<foreach collection="list" item="item" index="index" separator="," >  
+        	(#{item.username},#{item.password})  
+    	</foreach>
+	</insert>
 </mapper>

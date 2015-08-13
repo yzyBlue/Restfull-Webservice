@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "USERTABLE")
-@XmlRootElement(name = "UserInfo")
+@XmlRootElement
 public class User implements Serializable{
 	
 	/**

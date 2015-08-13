@@ -18,4 +18,6 @@ public interface UserDao {
 	public int saveBook(Book book);
 	public Book getBook(int bookid);
 	public User selectUserByNameAndId(@Param("id") String id, @Param("username") String username);
+	
+	public int insertUserList(List<User> userlist);
 }

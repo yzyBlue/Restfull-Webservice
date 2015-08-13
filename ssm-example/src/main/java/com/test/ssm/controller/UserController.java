@@ -1,5 +1,6 @@
 package com.test.ssm.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -132,4 +133,27 @@ public class UserController {
 		}
 		return userbook;
 	}
+	@SuppressWarnings("unused")
+	@RequestMapping(value = "/getUserList",method = RequestMethod.GET, produces = "application/xml;charset=UTF-8")
+	public @ResponseBody List<User> queryUserList() {
+		logger.info("查询   所有User 信息");
+		List<User> userlist = userDao.getAllUser();
+		//UserList users = new UserList();
+		//users.setUserlist(user);
+		return userlist;
+	}
+	
+	@RequestMapping(value = "/insertUserList", method = RequestMethod.POST, produces = "application/xml;charset=UTF-8")
+	public @ResponseBody UserList insertUserList(){
+		//List<User> userlist = userDao.getAllUser();
+		List<User> userlist =new ArrayList<User>();
+		userlist.add(new User(1,"Blue","Yuan.Ziyang"));
+		userlist.add(new User(2,"袁子洋","yzyBlue1991"));
+		userlist.add(new User(3,"心字成灰","小灰灰"));
+		int i=userDao.insertUserList(userlist);
+		UserList users = new UserList();
+		users.setUserlist(userlist);
+		return users;
+	}
+	
 }
