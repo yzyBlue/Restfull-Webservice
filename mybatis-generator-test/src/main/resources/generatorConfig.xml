@@ -154,5 +154,25 @@
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
+		<table schema="" tableName="Inst_LaboratoryTestRequest"
+			domainObjectName="LabTestReqInfo" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Inst_LaboratoryTestRequest_TestItem"
+			domainObjectName="LabTestItem" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_LaboratoryTest"
+			domainObjectName="LabTestData" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Action_LabTest"
+			domainObjectName="LabTestStatus" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
 	</context>
 </generatorConfiguration>
