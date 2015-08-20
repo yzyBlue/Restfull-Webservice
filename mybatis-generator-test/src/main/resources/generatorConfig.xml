@@ -49,130 +49,190 @@
 		</javaClientGenerator>
 
 		<!-- 配置表信息 -->
-		<table schema="" tableName="Person_Patient" domainObjectName="PatientInfo"
+		<!-- <table schema="" tableName="Person_Patient" domainObjectName="PatientInfo" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Admin_PatientAdmission" -->
+		<!-- domainObjectName="PatientVisitInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Admin_Transaction" domainObjectName="PatientADTInfo" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Admin_DischargeAdministrativeInformation" -->
+		<!-- domainObjectName="PatientDischargeInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Eval_ProblemDiagnosis" -->
+		<!-- domainObjectName="ProblemDiagnosis" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_Order" domainObjectName="OrderInfo" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_Order" domainObjectName="OrderStatusInfo" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_OrderExcute" domainObjectName="OrderExecutePaper" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_OrderExcute" -->
+		<!-- domainObjectName="OrderExecutePaperStatus" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_MedicationOrder" -->
+		<!-- domainObjectName="MedcationOrder" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_Medication" domainObjectName="MedcationOrderStatus" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_DrugsDispensing" -->
+		<!-- domainObjectName="DispensingDrugsReq" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_DispensingDrugs" -->
+		<!-- domainObjectName="DrugDispenseReqStatus" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_Prescription" domainObjectName="PrescriptionInfo" -->
+		<!-- enableCountByExample="false" enableUpdateByExample="false" -->
+		<!-- enableDeleteByExample="false" enableSelectByExample="false" -->
+		<!-- selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_Prescription_PrescriptionDetails" -->
+		<!-- domainObjectName="PrescriptionDetail" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_Prescription" -->
+		<!-- domainObjectName="PrescriptionStatus" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_ImagingExaminationRequest" -->
+		<!-- domainObjectName="ExamReqInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_ImagingExaminationRequest_ExamItem" -->
+		<!-- domainObjectName="ExamItem" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_ImagingExamination" -->
+		<!-- domainObjectName="ExamStatus" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Obsr_ImagingSeries" -->
+		<!-- domainObjectName="ExamDataInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Obsr_ImagingExaminationReport" -->
+		<!-- domainObjectName="ExamReportInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_LaboratoryTestRequest" -->
+		<!-- domainObjectName="LabTestReqInfo" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_LaboratoryTestRequest_TestItem" -->
+		<!-- domainObjectName="LabTestItem" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Obsr_LaboratoryTest" -->
+		<!-- domainObjectName="LabTestData" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_LabTest" -->
+		<!-- domainObjectName="LabTestStatus" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Inst_Transfusion" -->
+		<!-- domainObjectName="Transfution" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+		<!-- </table> -->
+		<!-- <table schema="" tableName="Action_Transfusion" -->
+		<!-- domainObjectName="TransfusionAction" enableCountByExample="false" -->
+		<!-- enableUpdateByExample="false" enableDeleteByExample="false" -->
+		<!-- enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		<table schema="" tableName="Inst_Therapy" domainObjectName="Therapy" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Therapy" -->
+<!-- 			domainObjectName="TherapyAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Inst_Diet" domainObjectName="Diet" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Diet" -->
+<!-- 			domainObjectName="DietAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Inst_Management" domainObjectName="Management" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Management" -->
+<!-- 			domainObjectName="ManagementAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Inst_Dispose" domainObjectName="Dispose" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Dispose" -->
+<!-- 			domainObjectName="DisposeAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+		<table schema="" tableName="Inst_Remain" domainObjectName="Remain"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 		</table>
-		<table schema="" tableName="Admin_PatientAdmission"
-			domainObjectName="PatientVisitInfo" enableCountByExample="false"
+		<table schema="" tableName="Action_Remain"
+			domainObjectName="RemainAction" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
-		<table schema="" tableName="Admin_Transaction" domainObjectName="PatientADTInfo"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Admin_DischargeAdministrativeInformation"
-			domainObjectName="PatientDischargeInfo" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Eval_ProblemDiagnosis"
-			domainObjectName="ProblemDiagnosis" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_Order" domainObjectName="OrderInfo"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_Order" domainObjectName="OrderStatusInfo"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_OrderExcute" domainObjectName="OrderExecutePaper"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_OrderExcute"
-			domainObjectName="OrderExecutePaperStatus" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_MedicationOrder"
-			domainObjectName="MedcationOrder" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_Medication" domainObjectName="MedcationOrderStatus"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_DrugsDispensing"
-			domainObjectName="DispensingDrugsReq" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_DispensingDrugs"
-			domainObjectName="DrugDispenseReqStatus" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_Prescription" domainObjectName="PrescriptionInfo"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_Prescription_PrescriptionDetails"
-			domainObjectName="PrescriptionDetail" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_Prescription"
-			domainObjectName="PrescriptionStatus" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_ImagingExaminationRequest"
-			domainObjectName="ExamReqInfo" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_ImagingExaminationRequest_ExamItem"
-			domainObjectName="ExamItem" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_ImagingExamination"
-			domainObjectName="ExamStatus" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Obsr_ImagingSeries"
-			domainObjectName="ExamDataInfo" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Obsr_ImagingExaminationReport"
-			domainObjectName="ExamReportInfo" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_LaboratoryTestRequest"
-			domainObjectName="LabTestReqInfo" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Inst_LaboratoryTestRequest_TestItem"
-			domainObjectName="LabTestItem" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Obsr_LaboratoryTest"
-			domainObjectName="LabTestData" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
-		<table schema="" tableName="Action_LabTest"
-			domainObjectName="LabTestStatus" enableCountByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" selectByExampleQueryId="false">
-		</table>
+
 	</context>
 </generatorConfiguration>
