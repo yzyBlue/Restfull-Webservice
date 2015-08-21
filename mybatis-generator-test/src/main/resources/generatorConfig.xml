@@ -223,16 +223,35 @@
 <!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
 <!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
 <!-- 		</table> -->
-		<table schema="" tableName="Inst_Remain" domainObjectName="Remain"
+<!-- 		<table schema="" tableName="Inst_Remain" domainObjectName="Remain" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Remain" -->
+<!-- 			domainObjectName="RemainAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Inst_BloodMatching" domainObjectName="BloodMatching" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_BloodMatching" -->
+<!-- 			domainObjectName="BloodMatchingAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+		<table schema="" tableName="Inst_Consultation" domainObjectName="Consultation"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 		</table>
-		<table schema="" tableName="Action_Remain"
-			domainObjectName="RemainAction" enableCountByExample="false"
+		<table schema="" tableName="Action_Consultation"
+			domainObjectName="ConsultationAction" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
-
 	</context>
 </generatorConfiguration>
