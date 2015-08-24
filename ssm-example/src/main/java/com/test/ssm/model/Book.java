@@ -1,16 +1,23 @@
 package com.test.ssm.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
+
+import com.test.ssm.util.DataValidate;
 
 @XmlRootElement(name = "BookInfo")
 public class Book implements Serializable{
 
 	private static final long serialVersionUID = -2548293112171619471L;
 	private int bookId;
+	@DataValidate(description="书代码",nullable=false)
 	private String bookCode;
+	@DataValidate(description="书名",nullable=false)
 	private String bookName;
+	@DataValidate(description="出版日期",nullable=false)
+	private Date pressDate;
 	public Book() {
 		super();
 	}
@@ -76,5 +83,11 @@ public class Book implements Serializable{
 	public String toString() {
 		return "Book [bookId=" + bookId + ", bookCode=" + bookCode
 				+ ", bookName=" + bookName + "]";
+	}
+	public Date getPressDate() {
+		return pressDate;
+	}
+	public void setPressDate(Date pressDate) {
+		this.pressDate = pressDate;
 	}
 }

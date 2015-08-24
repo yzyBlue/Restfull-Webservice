@@ -243,13 +243,48 @@
 <!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
 <!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
 <!-- 		</table> -->
-		<table schema="" tableName="Inst_Consultation" domainObjectName="Consultation"
+<!-- 		<table schema="" tableName="Inst_Consultation" domainObjectName="Consultation" -->
+<!-- 			enableCountByExample="false" enableUpdateByExample="false" -->
+<!-- 			enableDeleteByExample="false" enableSelectByExample="false" -->
+<!-- 			selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+<!-- 		<table schema="" tableName="Action_Consultation" -->
+<!-- 			domainObjectName="ConsultationAction" enableCountByExample="false" -->
+<!-- 			enableUpdateByExample="false" enableDeleteByExample="false" -->
+<!-- 			enableSelectByExample="false" selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
+		<table schema="" tableName="Obsr_NewBorn" domainObjectName="NewBornMaster"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 		</table>
-		<table schema="" tableName="Action_Consultation"
-			domainObjectName="ConsultationAction" enableCountByExample="false"
+		<table schema="" tableName="Obsr_NewBorn_BirthProcessSummary"
+			domainObjectName="NewBirthProcess" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_NewBorn_ExaminationAfterBirth"
+			domainObjectName="NewBornExamination" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_NewBorn_ApgarScore"
+			domainObjectName="NewBornApgarScore" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_NewBorn_VaccinationRecords"
+			domainObjectName="NewBornVaccinationRecords" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_NewBorn_HearingScreeningRecords"
+			domainObjectName="NewBornHearingScreeningRecords" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		<table schema="" tableName="Obsr_NewBorn_OtherInformation"
+			domainObjectName="NewBornOtherInformation" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>

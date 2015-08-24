@@ -1,11 +1,17 @@
 package com.test.ssm.model;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import com.test.ssm.util.DataValidate;
+
 import java.io.Serializable;
 @XmlRootElement(name = "user")
 public class User implements Serializable{
 	private static final long serialVersionUID = 1796496116086433538L;
+	@DataValidate(description="用户ID",nullable=false)
 	private int id;
+	@DataValidate(description="用户名",nullable=false)
 	private String username;
+	@DataValidate(description="用户密码",nullable=false)
 	private String password;
 	public User() {
 		super();
